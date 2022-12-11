@@ -34,3 +34,7 @@ CREATE TABLE users
 		role		NAMES DEFAULT 'user',
         secret_word NAMES NOT NULL
 	);
+
+
+INSERT INTO users(username, full_name, email, password, role, secret_word)
+VALUES ('admin', 'administrator', 'admin@gmail.com', 'admin', 'admin', 'admin')

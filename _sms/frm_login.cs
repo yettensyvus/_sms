@@ -32,30 +32,32 @@ namespace _sms
 
         private void btn_login_Click(object sender, EventArgs e)
         {
-            if (name_textbox.Text.Length == 0)
+            if (txt_username.Text.Length == 0)
             {
-                Notification.Alert("Please Enter Username", custom_controls.frm_notification.alertTypeEnum.Warning);
-                name_textbox.Focus();
+                notification.frm_notification.Alert("Please Enter Username", notification.frm_notification.alertTypeEnum.Warning);
+                txt_username.Focus();
                 return;
             }
-            if (name_textbox.Text.Length < 5)
+            if (txt_username.Text.Length < 5)
             {
-                Notification.Alert("Minimum 5 Characters Long", custom_controls.frm_notification.alertTypeEnum.Info);
-                name_textbox.Focus();
+                notification.frm_notification.Alert("Minimum 5 Characters Long", notification.frm_notification.alertTypeEnum.Info);
+                txt_username.Focus();
                 return;
             }
-            if (password_textbox.Text.Length == 0)
+            if (txt_password.Text.Length == 0)
             {
-                Notification.Alert("Please Enter Password", custom_controls.frm_notification.alertTypeEnum.Warning);
-                password_textbox.Focus();
+                notification.frm_notification.Alert("Please Enter Password", notification.frm_notification.alertTypeEnum.Warning);
+                txt_password.Focus();
                 return;
             }
-            if (password_textbox.Text.Length < 5)
+            if (txt_password.Text.Length < 5)
             {
-                Notification.Alert("Minimum 5 Characters Long", custom_controls.frm_notification.alertTypeEnum.Info);
-                password_textbox.Focus();
+                notification.frm_notification.Alert("Minimum 5 Characters Long", notification.frm_notification.alertTypeEnum.Info);
+                txt_password.Focus();
                 return;
             }
+
+
         }
     }
 }
