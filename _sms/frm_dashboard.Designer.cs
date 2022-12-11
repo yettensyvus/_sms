@@ -31,30 +31,30 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_dashboard));
             this.pnl_header = new System.Windows.Forms.Panel();
+            this.btn_min = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btn_close = new Bunifu.Framework.UI.BunifuImageButton();
             this.lbl_title = new System.Windows.Forms.Label();
+            this.btn_max = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btn_normal = new Bunifu.Framework.UI.BunifuImageButton();
             this.pnl_toggle = new System.Windows.Forms.Panel();
+            this.btn_toggle = new Bunifu.Framework.UI.BunifuImageButton();
             this.pnl_user_data = new System.Windows.Forms.Panel();
             this.pic_user = new System.Windows.Forms.PictureBox();
             this.lbl_username = new System.Windows.Forms.Label();
             this.pnl_drawer = new System.Windows.Forms.Panel();
-            this.btn_toggle = new Bunifu.Framework.UI.BunifuImageButton();
-            this.pnl_child = new System.Windows.Forms.Panel();
             this.btn_management = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.btn_min = new Bunifu.Framework.UI.BunifuImageButton();
-            this.btn_close = new Bunifu.Framework.UI.BunifuImageButton();
-            this.btn_max = new Bunifu.Framework.UI.BunifuImageButton();
-            this.btn_normal = new Bunifu.Framework.UI.BunifuImageButton();
+            this.pnl_child = new System.Windows.Forms.Panel();
             this.drag_control = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.pnl_header.SuspendLayout();
-            this.pnl_toggle.SuspendLayout();
-            this.pnl_user_data.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_user)).BeginInit();
-            this.pnl_drawer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_toggle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_min)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_close)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_max)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_normal)).BeginInit();
+            this.pnl_toggle.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_toggle)).BeginInit();
+            this.pnl_user_data.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_user)).BeginInit();
+            this.pnl_drawer.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnl_header
@@ -71,6 +71,36 @@
             this.pnl_header.Size = new System.Drawing.Size(619, 51);
             this.pnl_header.TabIndex = 13;
             // 
+            // btn_min
+            // 
+            this.btn_min.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_min.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_min.Image = ((System.Drawing.Image)(resources.GetObject("btn_min.Image")));
+            this.btn_min.ImageActive = null;
+            this.btn_min.Location = new System.Drawing.Point(520, 14);
+            this.btn_min.Name = "btn_min";
+            this.btn_min.Size = new System.Drawing.Size(25, 25);
+            this.btn_min.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_min.TabIndex = 7;
+            this.btn_min.TabStop = false;
+            this.btn_min.Zoom = 10;
+            this.btn_min.Click += new System.EventHandler(this.btn_min_Click);
+            // 
+            // btn_close
+            // 
+            this.btn_close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_close.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_close.Image = ((System.Drawing.Image)(resources.GetObject("btn_close.Image")));
+            this.btn_close.ImageActive = null;
+            this.btn_close.Location = new System.Drawing.Point(582, 14);
+            this.btn_close.Name = "btn_close";
+            this.btn_close.Size = new System.Drawing.Size(25, 25);
+            this.btn_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_close.TabIndex = 5;
+            this.btn_close.TabStop = false;
+            this.btn_close.Zoom = 10;
+            this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
+            // 
             // lbl_title
             // 
             this.lbl_title.AutoSize = true;
@@ -82,6 +112,36 @@
             this.lbl_title.TabIndex = 0;
             this.lbl_title.Text = "Dashboard";
             // 
+            // btn_max
+            // 
+            this.btn_max.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_max.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_max.Image = ((System.Drawing.Image)(resources.GetObject("btn_max.Image")));
+            this.btn_max.ImageActive = null;
+            this.btn_max.Location = new System.Drawing.Point(551, 14);
+            this.btn_max.Name = "btn_max";
+            this.btn_max.Size = new System.Drawing.Size(25, 25);
+            this.btn_max.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_max.TabIndex = 6;
+            this.btn_max.TabStop = false;
+            this.btn_max.Zoom = 10;
+            this.btn_max.Click += new System.EventHandler(this.btn_max_Click);
+            // 
+            // btn_normal
+            // 
+            this.btn_normal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_normal.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_normal.Image = ((System.Drawing.Image)(resources.GetObject("btn_normal.Image")));
+            this.btn_normal.ImageActive = null;
+            this.btn_normal.Location = new System.Drawing.Point(551, 14);
+            this.btn_normal.Name = "btn_normal";
+            this.btn_normal.Size = new System.Drawing.Size(25, 25);
+            this.btn_normal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_normal.TabIndex = 8;
+            this.btn_normal.TabStop = false;
+            this.btn_normal.Zoom = 10;
+            this.btn_normal.Click += new System.EventHandler(this.btn_normal_Click);
+            // 
             // pnl_toggle
             // 
             this.pnl_toggle.Controls.Add(this.btn_toggle);
@@ -90,6 +150,20 @@
             this.pnl_toggle.Name = "pnl_toggle";
             this.pnl_toggle.Size = new System.Drawing.Size(200, 52);
             this.pnl_toggle.TabIndex = 7;
+            // 
+            // btn_toggle
+            // 
+            this.btn_toggle.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_toggle.Image = ((System.Drawing.Image)(resources.GetObject("btn_toggle.Image")));
+            this.btn_toggle.ImageActive = null;
+            this.btn_toggle.Location = new System.Drawing.Point(12, 14);
+            this.btn_toggle.Name = "btn_toggle";
+            this.btn_toggle.Size = new System.Drawing.Size(27, 27);
+            this.btn_toggle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_toggle.TabIndex = 3;
+            this.btn_toggle.TabStop = false;
+            this.btn_toggle.Zoom = 10;
+            this.btn_toggle.Click += new System.EventHandler(this.btn_toggle_Click);
             // 
             // pnl_user_data
             // 
@@ -124,7 +198,7 @@
             this.lbl_username.Name = "lbl_username";
             this.lbl_username.Size = new System.Drawing.Size(215, 40);
             this.lbl_username.TabIndex = 1;
-            this.lbl_username.Text = "USENAME";
+            this.lbl_username.Text = "USERNAME";
             this.lbl_username.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pnl_drawer
@@ -138,29 +212,6 @@
             this.pnl_drawer.Name = "pnl_drawer";
             this.pnl_drawer.Size = new System.Drawing.Size(200, 513);
             this.pnl_drawer.TabIndex = 14;
-            // 
-            // btn_toggle
-            // 
-            this.btn_toggle.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_toggle.Image = ((System.Drawing.Image)(resources.GetObject("btn_toggle.Image")));
-            this.btn_toggle.ImageActive = null;
-            this.btn_toggle.Location = new System.Drawing.Point(12, 14);
-            this.btn_toggle.Name = "btn_toggle";
-            this.btn_toggle.Size = new System.Drawing.Size(27, 27);
-            this.btn_toggle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btn_toggle.TabIndex = 3;
-            this.btn_toggle.TabStop = false;
-            this.btn_toggle.Zoom = 10;
-            this.btn_toggle.Click += new System.EventHandler(this.btn_toggle_Click);
-            // 
-            // pnl_child
-            // 
-            this.pnl_child.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
-            this.pnl_child.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnl_child.Location = new System.Drawing.Point(200, 51);
-            this.pnl_child.Name = "pnl_child";
-            this.pnl_child.Size = new System.Drawing.Size(619, 462);
-            this.pnl_child.TabIndex = 15;
             // 
             // btn_management
             // 
@@ -200,65 +251,14 @@
             this.btn_management.TabIndex = 13;
             this.btn_management.Text = "Management";
             // 
-            // btn_min
+            // pnl_child
             // 
-            this.btn_min.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_min.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_min.Image = ((System.Drawing.Image)(resources.GetObject("btn_min.Image")));
-            this.btn_min.ImageActive = null;
-            this.btn_min.Location = new System.Drawing.Point(520, 14);
-            this.btn_min.Name = "btn_min";
-            this.btn_min.Size = new System.Drawing.Size(25, 25);
-            this.btn_min.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btn_min.TabIndex = 7;
-            this.btn_min.TabStop = false;
-            this.btn_min.Zoom = 10;
-            this.btn_min.Click += new System.EventHandler(this.btn_min_Click);
-            // 
-            // btn_close
-            // 
-            this.btn_close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_close.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_close.Image = ((System.Drawing.Image)(resources.GetObject("btn_close.Image")));
-            this.btn_close.ImageActive = null;
-            this.btn_close.Location = new System.Drawing.Point(582, 14);
-            this.btn_close.Name = "btn_close";
-            this.btn_close.Size = new System.Drawing.Size(25, 25);
-            this.btn_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btn_close.TabIndex = 5;
-            this.btn_close.TabStop = false;
-            this.btn_close.Zoom = 10;
-            this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
-            // 
-            // btn_max
-            // 
-            this.btn_max.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_max.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_max.Image = ((System.Drawing.Image)(resources.GetObject("btn_max.Image")));
-            this.btn_max.ImageActive = null;
-            this.btn_max.Location = new System.Drawing.Point(551, 14);
-            this.btn_max.Name = "btn_max";
-            this.btn_max.Size = new System.Drawing.Size(25, 25);
-            this.btn_max.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btn_max.TabIndex = 6;
-            this.btn_max.TabStop = false;
-            this.btn_max.Zoom = 10;
-            this.btn_max.Click += new System.EventHandler(this.btn_max_Click);
-            // 
-            // btn_normal
-            // 
-            this.btn_normal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_normal.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_normal.Image = ((System.Drawing.Image)(resources.GetObject("btn_normal.Image")));
-            this.btn_normal.ImageActive = null;
-            this.btn_normal.Location = new System.Drawing.Point(551, 14);
-            this.btn_normal.Name = "btn_normal";
-            this.btn_normal.Size = new System.Drawing.Size(25, 25);
-            this.btn_normal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btn_normal.TabIndex = 8;
-            this.btn_normal.TabStop = false;
-            this.btn_normal.Zoom = 10;
-            this.btn_normal.Click += new System.EventHandler(this.btn_normal_Click);
+            this.pnl_child.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
+            this.pnl_child.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnl_child.Location = new System.Drawing.Point(200, 51);
+            this.pnl_child.Name = "pnl_child";
+            this.pnl_child.Size = new System.Drawing.Size(619, 462);
+            this.pnl_child.TabIndex = 15;
             // 
             // drag_control
             // 
@@ -282,15 +282,15 @@
             this.Text = "frm_dashboard";
             this.pnl_header.ResumeLayout(false);
             this.pnl_header.PerformLayout();
-            this.pnl_toggle.ResumeLayout(false);
-            this.pnl_user_data.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pic_user)).EndInit();
-            this.pnl_drawer.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btn_toggle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_min)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_close)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_max)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_normal)).EndInit();
+            this.pnl_toggle.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btn_toggle)).EndInit();
+            this.pnl_user_data.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pic_user)).EndInit();
+            this.pnl_drawer.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

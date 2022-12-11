@@ -16,5 +16,25 @@ namespace _sms
         {
             InitializeComponent();
         }
+
+        private void btn_min_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btn_close_Click(object sender, EventArgs e)
+        {
+            if (messagebox.frm_messagebox.Show("Do you want to exit?", "Ooops!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Environment.Exit(0);
+            }
+        }
+
+        private void btn_login_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frm_dashboard form = new frm_dashboard();
+            form.Show();
+        }
     }
 }
