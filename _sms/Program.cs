@@ -8,9 +8,9 @@ namespace _sms
 {
     internal static class Program
     {
-        /// <summary>
-        /// Главная точка входа для приложения.
-        /// </summary>
+        public static string database_name = "school_management";
+
+
         [STAThread]
         static void Main()
         {
