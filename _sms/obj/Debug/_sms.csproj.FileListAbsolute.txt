@@ -16,3 +16,8 @@ C:\Users\Aleksandr Straton\source\repos\project\_sms\_sms\obj\Debug\_sms.pdb
 C:\Users\Aleksandr Straton\source\repos\project\_sms\_sms\bin\Debug\messagebox.exe
 C:\Users\Aleksandr Straton\source\repos\project\_sms\_sms\bin\Debug\messagebox.pdb
 C:\Users\Aleksandr Straton\source\repos\project\_sms\_sms\bin\Debug\messagebox.exe.config
+C:\Users\Aleksandr Straton\source\repos\project\_sms\_sms\bin\Debug\Bunifu.UI.WinForms.BunifuTextbox.dll
+C:\Users\Aleksandr Straton\source\repos\project\_sms\_sms\bin\Debug\Bunifu.Core.dll
+C:\Users\Aleksandr Straton\source\repos\project\_sms\_sms\bin\Debug\Bunifu.UI.WinForms.BunifuTextbox.xml
+C:\Users\Aleksandr Straton\source\repos\project\_sms\_sms\obj\Debug\_sms.exe.config
+C:\Users\Aleksandr Straton\source\repos\project\_sms\_sms\obj\Debug\_sms.frm_login.resources
