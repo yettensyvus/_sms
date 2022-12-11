@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace _sms
 {
-    public partial class Form1 : Form
+    public partial class frm_dashboard : Form
     {
-        public Form1()
+        public frm_dashboard()
         {
             InitializeComponent();
         }
