@@ -16,5 +16,57 @@ namespace _sms
         {
             InitializeComponent();
         }
+
+        int lx, ly;
+        int sw, sh;
+
+        private void btn_min_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btn_max_Click(object sender, EventArgs e)
+        {
+            lx = this.Location.X;
+            ly = this.Location.Y;
+            sw = this.Size.Width;
+            sh = this.Size.Height;
+            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
+            this.Location = Screen.PrimaryScreen.WorkingArea.Location;
+            btn_max.Visible = false;
+            btn_normal.Visible = true;
+        }
+
+        private void btn_normal_Click(object sender, EventArgs e)
+        {
+            this.Size = new Size(sw, sh);
+            this.Location = new Point(lx, ly);
+            btn_normal.Visible = false;
+            btn_max.Visible = true;
+        }
+
+        private void btn_close_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
+
+        private void btn_toggle_Click(object sender, EventArgs e)
+        {
+            if (pnl_drawer.Width > 50)
+            {
+                pnl_drawer.Width = 50;
+                pnl_toggle.BackColor = Color.FromArgb(11, 11, 11);
+                pnl_user_data.Height = 80;
+                lbl_username.Visible = false;
+
+            }
+            else
+            {
+                pnl_drawer.Width = 200;
+                pnl_toggle.BackColor = Color.FromArgb(32, 32, 36);
+                pnl_user_data.Height = 180;
+                lbl_username.Visible = true;
+            }
+        }
     }
 }
