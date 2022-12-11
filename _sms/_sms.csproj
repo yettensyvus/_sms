@@ -89,5 +89,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\messagebox\messagebox\messagebox.csproj">
+      <Project>{03fa26de-a363-4835-a0bc-d9d9b3cc5dae}</Project>
+      <Name>messagebox</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

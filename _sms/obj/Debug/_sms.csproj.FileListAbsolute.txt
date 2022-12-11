@@ -13,3 +13,6 @@ C:\Users\Aleksandr Straton\source\repos\project\_sms\_sms\obj\Debug\_sms.csproj.
 C:\Users\Aleksandr Straton\source\repos\project\_sms\_sms\obj\Debug\_sms.csproj.CopyComplete
 C:\Users\Aleksandr Straton\source\repos\project\_sms\_sms\obj\Debug\_sms.exe
 C:\Users\Aleksandr Straton\source\repos\project\_sms\_sms\obj\Debug\_sms.pdb
+C:\Users\Aleksandr Straton\source\repos\project\_sms\_sms\bin\Debug\messagebox.exe
+C:\Users\Aleksandr Straton\source\repos\project\_sms\_sms\bin\Debug\messagebox.pdb
+C:\Users\Aleksandr Straton\source\repos\project\_sms\_sms\bin\Debug\messagebox.exe.config

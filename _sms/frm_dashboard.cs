@@ -47,7 +47,10 @@ namespace _sms
 
         private void btn_close_Click(object sender, EventArgs e)
         {
-            Environment.Exit(0);
+            if (messagebox.frm_messagebox.Show("Do you want to exit?", "Alert!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Environment.Exit(0);
+            }
         }
 
         private void btn_toggle_Click(object sender, EventArgs e)
