@@ -223,7 +223,6 @@
             this.btn_management.BackColor = System.Drawing.Color.Transparent;
             this.btn_management.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(18)))));
             this.btn_management.BorderColor = System.Drawing.Color.Empty;
-            this.btn_management.ButtonType = Guna.UI.WinForms.AdvenceButtonType.RadioButton;
             this.btn_management.CheckedBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(11)))), ((int)(((byte)(11)))));
             this.btn_management.CheckedBorderColor = System.Drawing.Color.Empty;
             this.btn_management.CheckedForeColor = System.Drawing.Color.Gainsboro;
@@ -277,7 +276,7 @@
             this.btn_exit.BackColor = System.Drawing.Color.Transparent;
             this.btn_exit.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(36)))));
             this.btn_exit.BorderColor = System.Drawing.Color.Empty;
-            this.btn_exit.CheckedBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(11)))), ((int)(((byte)(11)))));
+            this.btn_exit.CheckedBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(36)))));
             this.btn_exit.CheckedBorderColor = System.Drawing.Color.Empty;
             this.btn_exit.CheckedForeColor = System.Drawing.Color.Gainsboro;
             this.btn_exit.CheckedImage = ((System.Drawing.Image)(resources.GetObject("btn_exit.CheckedImage")));
@@ -295,13 +294,13 @@
             this.btn_exit.Location = new System.Drawing.Point(0, 464);
             this.btn_exit.Margin = new System.Windows.Forms.Padding(0);
             this.btn_exit.Name = "btn_exit";
-            this.btn_exit.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
+            this.btn_exit.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
             this.btn_exit.OnHoverBorderColor = System.Drawing.Color.Empty;
             this.btn_exit.OnHoverForeColor = System.Drawing.Color.Gainsboro;
             this.btn_exit.OnHoverImage = null;
             this.btn_exit.OnHoverLineColor = System.Drawing.Color.Empty;
             this.btn_exit.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
-            this.btn_exit.OnPressedDepth = 2;
+            this.btn_exit.OnPressedDepth = 0;
             this.btn_exit.Size = new System.Drawing.Size(200, 49);
             this.btn_exit.TabIndex = 14;
             this.btn_exit.Text = "Exit";
