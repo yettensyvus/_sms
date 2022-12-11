@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_sms", "_sms\_sms.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "messagebox", "..\messagebox\messagebox\messagebox.csproj", "{03FA26DE-A363-4835-A0BC-D9D9B3CC5DAE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "notification", "..\notification\notification\notification.csproj", "{5234F06B-B268-4889-9FB5-7DBD125878EF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{03FA26DE-A363-4835-A0BC-D9D9B3CC5DAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{03FA26DE-A363-4835-A0BC-D9D9B3CC5DAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{03FA26DE-A363-4835-A0BC-D9D9B3CC5DAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5234F06B-B268-4889-9FB5-7DBD125878EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5234F06B-B268-4889-9FB5-7DBD125878EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5234F06B-B268-4889-9FB5-7DBD125878EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5234F06B-B268-4889-9FB5-7DBD125878EF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

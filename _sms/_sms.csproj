@@ -107,6 +107,10 @@
       <Project>{03fa26de-a363-4835-a0bc-d9d9b3cc5dae}</Project>
       <Name>messagebox</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\notification\notification\notification.csproj">
+      <Project>{5234f06b-b268-4889-9fb5-7dbd125878ef}</Project>
+      <Name>notification</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="database\" />

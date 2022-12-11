@@ -32,9 +32,30 @@ namespace _sms
 
         private void btn_login_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            frm_dashboard form = new frm_dashboard();
-            form.Show();
+            if (name_textbox.Text.Length == 0)
+            {
+                Notification.Alert("Please Enter Username", custom_controls.frm_notification.alertTypeEnum.Warning);
+                name_textbox.Focus();
+                return;
+            }
+            if (name_textbox.Text.Length < 5)
+            {
+                Notification.Alert("Minimum 5 Characters Long", custom_controls.frm_notification.alertTypeEnum.Info);
+                name_textbox.Focus();
+                return;
+            }
+            if (password_textbox.Text.Length == 0)
+            {
+                Notification.Alert("Please Enter Password", custom_controls.frm_notification.alertTypeEnum.Warning);
+                password_textbox.Focus();
+                return;
+            }
+            if (password_textbox.Text.Length < 5)
+            {
+                Notification.Alert("Minimum 5 Characters Long", custom_controls.frm_notification.alertTypeEnum.Info);
+                password_textbox.Focus();
+                return;
+            }
         }
     }
 }
