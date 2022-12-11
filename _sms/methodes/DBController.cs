@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace _sms.methodes
 {
@@ -16,14 +17,22 @@ namespace _sms.methodes
         {
             connection = new SqlConnection(@"Data Source =.\SQLEXPRESS; Initial Catalog = " + Program.database_name + "; Integrated Security = True");
 
-            if (connection.State == ConnectionState.Open)
+            try
             {
-                connection.Close();
-                connection.Dispose();
+                if (connection.State == ConnectionState.Open)
+                {
+                    connection.Close();
+                    connection.Dispose();
+
+                }
+                else
+                {
+                    connection.Open();
+                }
             }
-            else
+            catch(Exception ex)
             {
-                connection.Open();
+                messagebox.frm_messagebox.Show(ex.Message, "Ooops! Something is wrong!", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
             }
             return connection;
         }
@@ -37,5 +46,33 @@ namespace _sms.methodes
             }
         }
 
+
+        public DataTable ExecuteReader(string query)
+        {
+            try
+            {
+                SqlCommand command = new SqlCommand(query, OpenConection());
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+                    DataTable dt = new DataTable();
+                    dt.Load(reader);
+                    reader.Close();
+                    return dt;
+                }
+                else
+                {
+                    if (!reader.IsClosed)
+                        reader.Close();
+                    return null;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return null;
+            }
+        }
     }
 }

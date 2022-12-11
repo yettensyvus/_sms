@@ -21,3 +21,6 @@ C:\Users\Aleksandr Straton\source\repos\project\_sms\_sms\bin\Debug\Bunifu.Core.
 C:\Users\Aleksandr Straton\source\repos\project\_sms\_sms\bin\Debug\Bunifu.UI.WinForms.BunifuTextbox.xml
 C:\Users\Aleksandr Straton\source\repos\project\_sms\_sms\obj\Debug\_sms.exe.config
 C:\Users\Aleksandr Straton\source\repos\project\_sms\_sms\obj\Debug\_sms.frm_login.resources
+C:\Users\Aleksandr Straton\source\repos\project\_sms\_sms\bin\Debug\notification.exe
+C:\Users\Aleksandr Straton\source\repos\project\_sms\_sms\bin\Debug\notification.pdb
+C:\Users\Aleksandr Straton\source\repos\project\_sms\_sms\bin\Debug\notification.exe.config

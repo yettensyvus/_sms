@@ -1,8 +1,10 @@
-﻿using System;
+﻿using _sms.methodes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -57,7 +59,49 @@ namespace _sms
                 return;
             }
 
+            try 
+            {
+                DBController controller = new DBController();
 
+                frm_dashboard f = new frm_dashboard();
+
+                string query = "SELECT * FROM users WHERE username = '" + txt_username.Text.Trim() + "' AND password = '" + txt_password.Text.Trim() + "'";
+
+                DataTable dtbl = new DataTable();
+                dtbl = controller.ExecuteReader(query);
+
+                if (dtbl == null)
+                {
+                    notification.frm_notification.Alert("Check your username and password", notification.frm_notification.alertTypeEnum.Error);
+                    link_forgot.Visible = true;
+                    return;
+                }
+
+                if (dtbl.Rows.Count == 1 && dtbl.Rows[0]["role"].ToString() == "admin")
+                {
+                    Program.frm_state = "Admin";
+                    Program.user_name = dtbl.Rows[0]["full_name"].ToString();
+                    f.lbl_username.Text = Program.user_name;
+
+                    this.Hide();
+                    f.Show();
+                }
+
+                if (dtbl.Rows.Count == 1 && dtbl.Rows[0]["role"].ToString() == "user")
+                {
+                    Program.frm_state = "User";
+                    Program.user_name = dtbl.Rows[0]["full_name"].ToString();
+                    f.lbl_username.Text = Program.user_name;
+
+                    this.Hide();
+                    f.Show();
+                }
+            }
+
+            catch (Exception ex)
+            {
+                messagebox.frm_messagebox.Show(ex.Message, "Ooops! Somethig is wrong!", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+            }
         }
     }
 }

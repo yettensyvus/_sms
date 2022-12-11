@@ -9,6 +9,8 @@ namespace _sms
     internal static class Program
     {
         public static string database_name = "school_management";
+        public static string frm_state;
+        public static string user_name;
 
 
         [STAThread]
