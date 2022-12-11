@@ -45,6 +45,7 @@
             this.btn_management = new Guna.UI.WinForms.GunaAdvenceButton();
             this.pnl_child = new System.Windows.Forms.Panel();
             this.drag_control = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.btn_exit = new Guna.UI.WinForms.GunaAdvenceButton();
             this.pnl_header.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_min)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_close)).BeginInit();
@@ -204,6 +205,7 @@
             // pnl_drawer
             // 
             this.pnl_drawer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(36)))));
+            this.pnl_drawer.Controls.Add(this.btn_exit);
             this.pnl_drawer.Controls.Add(this.btn_management);
             this.pnl_drawer.Controls.Add(this.pnl_user_data);
             this.pnl_drawer.Controls.Add(this.pnl_toggle);
@@ -267,6 +269,44 @@
             this.drag_control.TargetControl = this.pnl_header;
             this.drag_control.Vertical = true;
             // 
+            // btn_exit
+            // 
+            this.btn_exit.Animated = true;
+            this.btn_exit.AnimationHoverSpeed = 0.07F;
+            this.btn_exit.AnimationSpeed = 0.03F;
+            this.btn_exit.BackColor = System.Drawing.Color.Transparent;
+            this.btn_exit.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(36)))));
+            this.btn_exit.BorderColor = System.Drawing.Color.Empty;
+            this.btn_exit.CheckedBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(11)))), ((int)(((byte)(11)))));
+            this.btn_exit.CheckedBorderColor = System.Drawing.Color.Empty;
+            this.btn_exit.CheckedForeColor = System.Drawing.Color.Gainsboro;
+            this.btn_exit.CheckedImage = ((System.Drawing.Image)(resources.GetObject("btn_exit.CheckedImage")));
+            this.btn_exit.CheckedLineColor = System.Drawing.Color.Black;
+            this.btn_exit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_exit.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_exit.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btn_exit.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_exit.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btn_exit.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btn_exit.Image = ((System.Drawing.Image)(resources.GetObject("btn_exit.Image")));
+            this.btn_exit.ImageSize = new System.Drawing.Size(32, 32);
+            this.btn_exit.LineColor = System.Drawing.Color.Empty;
+            this.btn_exit.LineLeft = 3;
+            this.btn_exit.Location = new System.Drawing.Point(0, 464);
+            this.btn_exit.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_exit.Name = "btn_exit";
+            this.btn_exit.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
+            this.btn_exit.OnHoverBorderColor = System.Drawing.Color.Empty;
+            this.btn_exit.OnHoverForeColor = System.Drawing.Color.Gainsboro;
+            this.btn_exit.OnHoverImage = null;
+            this.btn_exit.OnHoverLineColor = System.Drawing.Color.Empty;
+            this.btn_exit.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
+            this.btn_exit.OnPressedDepth = 2;
+            this.btn_exit.Size = new System.Drawing.Size(200, 49);
+            this.btn_exit.TabIndex = 14;
+            this.btn_exit.Text = "Exit";
+            this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
+            // 
             // frm_dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -312,6 +352,7 @@
         private Bunifu.Framework.UI.BunifuImageButton btn_normal;
         private Bunifu.Framework.UI.BunifuImageButton btn_max;
         private Bunifu.Framework.UI.BunifuDragControl drag_control;
+        internal Guna.UI.WinForms.GunaAdvenceButton btn_exit;
     }
 }
 

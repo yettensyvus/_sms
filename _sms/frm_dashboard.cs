@@ -45,6 +45,16 @@ namespace _sms
             btn_max.Visible = true;
         }
 
+        private void btn_exit_Click(object sender, EventArgs e)
+        {
+            if (messagebox.frm_messagebox.Show("Do you want to logout?", "Oooops!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Close();
+                frm_login fm = new frm_login();
+                fm.Show();
+            }
+        }
+
         private void btn_close_Click(object sender, EventArgs e)
         {
             if (messagebox.frm_messagebox.Show("Do you want to exit?", "Alert!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
