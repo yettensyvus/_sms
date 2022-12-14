@@ -24,3 +24,4 @@ C:\Users\Aleksandr Straton\source\repos\project\_sms\_sms\obj\Debug\_sms.frm_log
 C:\Users\Aleksandr Straton\source\repos\project\_sms\_sms\bin\Debug\notification.exe
 C:\Users\Aleksandr Straton\source\repos\project\_sms\_sms\bin\Debug\notification.pdb
 C:\Users\Aleksandr Straton\source\repos\project\_sms\_sms\bin\Debug\notification.exe.config
+C:\Users\Aleksandr Straton\source\repos\project\_sms\_sms\obj\Debug\_sms.frm_database.resources

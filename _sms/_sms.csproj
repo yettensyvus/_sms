@@ -65,6 +65,12 @@
     <Compile Include="frm_dashboard.Designer.cs">
       <DependentUpon>frm_dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_database.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_database.Designer.cs">
+      <DependentUpon>frm_database.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frm_dashboard.resx">
       <DependentUpon>frm_dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_database.resx">
+      <DependentUpon>frm_database.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_login.resx">
       <DependentUpon>frm_login.cs</DependentUpon>

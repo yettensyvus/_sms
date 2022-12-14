@@ -1,14 +1,6 @@
 ﻿using System;
 using System.Text;
 using System.Security.Cryptography;
-using System.Data;
-using System.Data.SqlClient;
-using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using System.Text.RegularExpressions;
-using System.Drawing;
-using System.IO;
-using System.Collections.Generic;
 
 namespace _sms.methodes
 {
@@ -50,10 +42,10 @@ namespace _sms.methodes
             aesprovider.Mode = CipherMode.CBC;
 
             ICryptoTransform icrypt = aesprovider.CreateDecryptor(aesprovider.Key, aesprovider.IV);
-            byte[] dencryptedData = icrypt.TransformFinalBlock(textbytes, 0, textbytes.Length);
+            byte[] decryptedData = icrypt.TransformFinalBlock(textbytes, 0, textbytes.Length);
             icrypt.Dispose();
 
-            return ASCIIEncoding.ASCII.GetString(dencryptedData);
+            return ASCIIEncoding.ASCII.GetString(decryptedData);
         }
     }
 }

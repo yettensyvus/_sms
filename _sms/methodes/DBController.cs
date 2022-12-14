@@ -23,7 +23,6 @@ namespace _sms.methodes
                 {
                     connection.Close();
                     connection.Dispose();
-
                 }
                 else
                 {
@@ -34,6 +33,7 @@ namespace _sms.methodes
             {
                 messagebox.frm_messagebox.Show(ex.Message, "Ooops! Something is wrong!", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
             }
+
             return connection;
         }
 
