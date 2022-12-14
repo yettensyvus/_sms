@@ -65,7 +65,7 @@ namespace _sms
 
                 frm_dashboard f = new frm_dashboard();
 
-                string query = "SELECT * FROM users_view WHERE username = '" + txt_username.Text.Trim() + "' AND password = '" + txt_password.Text.Trim() + "'";
+                string query = "SELECT * FROM users_view WHERE username = '" + txt_username.Text.Trim() + "' AND password = '" + AesCrypt.Encrypt(txt_password.Text.Trim()) + "'";
 
                 DataTable dtbl = new DataTable();
                 dtbl = controller.ExecuteReader(query);
