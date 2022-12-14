@@ -65,7 +65,7 @@ namespace _sms
 
                 frm_dashboard f = new frm_dashboard();
 
-                string query = "SELECT * FROM users WHERE username = '" + txt_username.Text.Trim() + "' AND password = '" + txt_password.Text.Trim() + "'";
+                string query = "SELECT * FROM users_view WHERE username = '" + txt_username.Text.Trim() + "' AND password = '" + txt_password.Text.Trim() + "'";
 
                 DataTable dtbl = new DataTable();
                 dtbl = controller.ExecuteReader(query);
@@ -87,9 +87,19 @@ namespace _sms
                     f.Show();
                 }
 
-                if (dtbl.Rows.Count == 1 && dtbl.Rows[0]["role"].ToString() == "user")
+                if (dtbl.Rows.Count == 1 && dtbl.Rows[0]["role"].ToString() == "teacher")
                 {
-                    Program.frm_state = "User";
+                    Program.frm_state = "Teacher";
+                    Program.user_name = dtbl.Rows[0]["full_name"].ToString();
+                    f.lbl_username.Text = Program.user_name;
+
+                    this.Hide();
+                    f.Show();
+                }
+
+                if (dtbl.Rows.Count == 1 && dtbl.Rows[0]["role"].ToString() == "student")
+                {
+                    Program.frm_state = "Student";
                     Program.user_name = dtbl.Rows[0]["full_name"].ToString();
                     f.lbl_username.Text = Program.user_name;
 
