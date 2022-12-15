@@ -74,5 +74,24 @@ namespace _sms.methodes
                 return null;
             }
         }
+
+        public bool ExecuteParameter(string query, string name, SqlDbType type, string value)
+        {
+            try
+            {
+                SqlCommand command = new SqlCommand(query, OpenConection());
+                SqlParameter parameter = new SqlParameter(name, type);
+                parameter.Value = value;
+                command.Parameters.Add(parameter);
+                command.ExecuteNonQuery();
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return false;
+            }
+        }
     }
 }

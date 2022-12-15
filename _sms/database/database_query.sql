@@ -70,13 +70,13 @@ CREATE TABLE students
 
 
 INSERT INTO admins(username, full_name, email, password, role, secret_word)
-VALUES ('admin', 'administrator', 'admin@gmail.com', 'admin', 'admin', 'admin')
+VALUES ('admin', 'administrator', 'admin@gmail.com', 'TgrsXplcrICYlqMPDJoT9w==', 'admin', 'admin') --encrypted password: admin
 
 INSERT INTO teachers(username, full_name, email, password, role, secret_word)
-VALUES ('teacher', 'teacher', 'teacher@gmail.com', 'teacher', 'teacher', 'teacher')
+VALUES ('teacher', 'teacher', 'teacher@gmail.com', 'kELewU2L+UG+d/LA8Ahimw==', 'teacher', 'teacher') --encrypted password: teacher
 
 INSERT INTO students(username, full_name, email, password, role, secret_word)
-VALUES ('student', 'student', 'student@gmail.com', 'student', 'student', 'student')
+VALUES ('student', 'student', 'student@gmail.com', 'PbgxHRTNv+DrVusXLfzE/w==', 'student', 'student') --encrypted password: student
 
 SELECT * FROM admins
 SELECT * FROM  teachers
@@ -93,4 +93,4 @@ CREATE VIEW users_view AS
 
 GO
 
-SELECT * FROM users_view
+SELECT * FROM sys.databases WHERE name NOT IN ('master', 'tempdb', 'model', 'msdb'); 

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_database));
             this.pnl_header = new System.Windows.Forms.Panel();
             this.btn_min = new Bunifu.Framework.UI.BunifuImageButton();
@@ -35,6 +36,7 @@
             this.lbl_header = new System.Windows.Forms.Label();
             this.cmb_databaselist = new Guna.UI.WinForms.GunaComboBox();
             this.btn_connect = new Guna.UI.WinForms.GunaButton();
+            this.drag_control = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.pnl_header.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_min)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_close)).BeginInit();
@@ -143,6 +145,13 @@
             this.btn_connect.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btn_connect.Click += new System.EventHandler(this.btn_connect_Click);
             // 
+            // drag_control
+            // 
+            this.drag_control.Fixed = true;
+            this.drag_control.Horizontal = true;
+            this.drag_control.TargetControl = this.pnl_header;
+            this.drag_control.Vertical = true;
+            // 
             // frm_database
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -173,5 +182,6 @@
         private System.Windows.Forms.Label lbl_header;
         private Guna.UI.WinForms.GunaComboBox cmb_databaselist;
         internal Guna.UI.WinForms.GunaButton btn_connect;
+        private Bunifu.Framework.UI.BunifuDragControl drag_control;
     }
 }

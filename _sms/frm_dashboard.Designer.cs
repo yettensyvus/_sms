@@ -45,8 +45,8 @@
             this.btn_exit = new Guna.UI.WinForms.GunaAdvenceButton();
             this.btn_management = new Guna.UI.WinForms.GunaAdvenceButton();
             this.pnl_child = new System.Windows.Forms.Panel();
-            this.drag_control = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.resize_control = new Guna.UI.WinForms.GunaResizeControl();
+            this.drag_control = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.pnl_header.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_min)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_close)).BeginInit();
@@ -302,15 +302,9 @@
             this.pnl_child.Size = new System.Drawing.Size(800, 500);
             this.pnl_child.TabIndex = 15;
             // 
-            // drag_control
-            // 
-            this.drag_control.Fixed = true;
-            this.drag_control.Horizontal = true;
-            this.drag_control.TargetControl = this.pnl_header;
-            this.drag_control.Vertical = true;
-            // 
             // resize_control
             // 
+            this.resize_control.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.resize_control.BackColor = System.Drawing.Color.Transparent;
             this.resize_control.Cursor = System.Windows.Forms.Cursors.SizeNWSE;
             this.resize_control.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(11)))), ((int)(((byte)(11)))));
@@ -320,6 +314,13 @@
             this.resize_control.Size = new System.Drawing.Size(20, 20);
             this.resize_control.TabIndex = 0;
             this.resize_control.TargetControl = this;
+            // 
+            // drag_control
+            // 
+            this.drag_control.Fixed = true;
+            this.drag_control.Horizontal = true;
+            this.drag_control.TargetControl = this.pnl_header;
+            this.drag_control.Vertical = true;
             // 
             // frm_dashboard
             // 
