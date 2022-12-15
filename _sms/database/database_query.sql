@@ -40,13 +40,15 @@ CREATE TABLE teachers
 	(
 		id	INT IDENTITY(1, 1),
 		id_teacher AS 'T' + RIGHT('000' + CAST(id AS VARCHAR(3)), 3) PERSISTED,
-        username	NAMES UNIQUE,
-		full_name	NAMES NOT NULL,
-		email		NAMES NOT NULL,
-        password	NAMES NOT NULL,
-		photo		IMAGE,
-		role		NAMES DEFAULT 'teacher',
-        secret_word NAMES NOT NULL,
+        username		NAMES UNIQUE,
+		password		NAMES NOT NULL,
+		full_name		NAMES NOT NULL,
+		idnp			NAMES NOT NULL,
+		date_of_birth	DATE NOT NULL,
+		email			NAMES NOT NULL,
+		photo			IMAGE,
+		role			NAMES DEFAULT 'teacher',
+        secret_word		NAMES NOT NULL,
 
 		CONSTRAINT PK_teachers PRIMARY KEY(id_teacher)
 
@@ -56,13 +58,15 @@ CREATE TABLE students
 	(
 		id	INT IDENTITY(1, 1),
 		id_student AS 'S' + RIGHT('000' + CAST(id AS VARCHAR(3)), 3) PERSISTED,
-        username	NAMES UNIQUE,
-		full_name	NAMES NOT NULL,
-		email		NAMES NOT NULL,
-        password	NAMES NOT NULL,
-		photo		IMAGE,
-		role		NAMES DEFAULT 'student',
-        secret_word NAMES NOT NULL,
+        username		NAMES UNIQUE,
+		password		NAMES NOT NULL,
+		full_name		NAMES NOT NULL,
+		idnp			NAMES NOT NULL,
+		date_of_birth	DATE NOT NULL,
+		email			NAMES NOT NULL,
+		photo			IMAGE,
+		role			NAMES DEFAULT 'student',
+        secret_word		NAMES NOT NULL,
 
 		CONSTRAINT PK_students PRIMARY KEY(id_student)
 
@@ -72,11 +76,11 @@ CREATE TABLE students
 INSERT INTO admins(username, full_name, email, password, role, secret_word)
 VALUES ('admin', 'administrator', 'admin@gmail.com', 'TgrsXplcrICYlqMPDJoT9w==', 'admin', 'admin') --encrypted password: admin
 
-INSERT INTO teachers(username, full_name, email, password, role, secret_word)
-VALUES ('teacher', 'teacher', 'teacher@gmail.com', 'kELewU2L+UG+d/LA8Ahimw==', 'teacher', 'teacher') --encrypted password: teacher
+INSERT INTO teachers(username, full_name, email, password, role, secret_word, idnp, date_of_birth)
+VALUES ('teacher', 'teacher', 'teacher@gmail.com', 'kELewU2L+UG+d/LA8Ahimw==', 'teacher', 'teacher', '3694521786203', '1975-07-21') --encrypted password: teacher
 
-INSERT INTO students(username, full_name, email, password, role, secret_word)
-VALUES ('student', 'student', 'student@gmail.com', 'PbgxHRTNv+DrVusXLfzE/w==', 'student', 'student') --encrypted password: student
+INSERT INTO students(username, full_name, email, password, role, secret_word, idnp, date_of_birth)
+VALUES ('student', 'student', 'student@gmail.com', 'PbgxHRTNv+DrVusXLfzE/w==', 'student', 'student', '1793456287139', '2005-12-28') --encrypted password: student
 
 SELECT * FROM admins
 SELECT * FROM  teachers

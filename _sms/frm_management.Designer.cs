@@ -52,6 +52,7 @@
             this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.pnl_separator = new System.Windows.Forms.Panel();
             this.gunaElipsePanel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.guna2ShadowPanel2.SuspendLayout();
@@ -154,6 +155,7 @@
             this.guna2Button2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(18)))));
             this.guna2Button2.BorderRadius = 21;
             this.guna2Button2.CheckedState.Parent = this.guna2Button2;
+            this.guna2Button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2Button2.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.guna2Button2.CustomImages.Parent = this.guna2Button2;
             this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
@@ -173,6 +175,7 @@
             // guna2PictureBox2
             // 
             this.guna2PictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox2.Enabled = false;
             this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
             this.guna2PictureBox2.Location = new System.Drawing.Point(151, 10);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
@@ -244,6 +247,7 @@
             this.guna2Button3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(18)))));
             this.guna2Button3.BorderRadius = 21;
             this.guna2Button3.CheckedState.Parent = this.guna2Button3;
+            this.guna2Button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2Button3.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.guna2Button3.CustomImages.Parent = this.guna2Button3;
             this.guna2Button3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
@@ -263,6 +267,7 @@
             // guna2PictureBox3
             // 
             this.guna2PictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox3.Enabled = false;
             this.guna2PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox3.Image")));
             this.guna2PictureBox3.Location = new System.Drawing.Point(151, 10);
             this.guna2PictureBox3.Name = "guna2PictureBox3";
@@ -334,6 +339,7 @@
             this.guna2Button4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(18)))));
             this.guna2Button4.BorderRadius = 21;
             this.guna2Button4.CheckedState.Parent = this.guna2Button4;
+            this.guna2Button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2Button4.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.guna2Button4.CustomImages.Parent = this.guna2Button4;
             this.guna2Button4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
@@ -353,6 +359,7 @@
             // guna2PictureBox4
             // 
             this.guna2PictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox4.Enabled = false;
             this.guna2PictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox4.Image")));
             this.guna2PictureBox4.Location = new System.Drawing.Point(151, 10);
             this.guna2PictureBox4.Name = "guna2PictureBox4";
@@ -385,12 +392,21 @@
             this.label12.TabIndex = 16;
             this.label12.Text = "Students";
             // 
+            // pnl_separator
+            // 
+            this.pnl_separator.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnl_separator.Location = new System.Drawing.Point(20, 205);
+            this.pnl_separator.Name = "pnl_separator";
+            this.pnl_separator.Size = new System.Drawing.Size(969, 40);
+            this.pnl_separator.TabIndex = 9;
+            // 
             // frm_management
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
             this.ClientSize = new System.Drawing.Size(1009, 549);
+            this.Controls.Add(this.pnl_separator);
             this.Controls.Add(this.gunaElipsePanel1);
             this.Controls.Add(this.pnl_right);
             this.Controls.Add(this.pnl_left);
@@ -439,5 +455,6 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Panel pnl_separator;
     }
 }
