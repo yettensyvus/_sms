@@ -43,10 +43,10 @@
             this.pnl_drawer = new System.Windows.Forms.Panel();
             this.btn_exit = new Guna.UI.WinForms.GunaAdvenceButton();
             this.btn_management = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.pnl_child = new System.Windows.Forms.Panel();
-            this.resize_control = new Guna.UI.WinForms.GunaResizeControl();
             this.drag_control = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.pic_user = new Guna.UI.WinForms.GunaCirclePictureBox();
+            this.resize_control = new Guna.UI.WinForms.GunaResizeControl();
+            this.pnl_child = new System.Windows.Forms.Panel();
             this.pnl_header.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_min)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_close)).BeginInit();
@@ -56,8 +56,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.btn_toggle)).BeginInit();
             this.pnl_user_data.SuspendLayout();
             this.pnl_drawer.SuspendLayout();
-            this.pnl_child.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_user)).BeginInit();
+            this.pnl_child.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnl_header
@@ -71,7 +71,7 @@
             this.pnl_header.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_header.Location = new System.Drawing.Point(200, 0);
             this.pnl_header.Name = "pnl_header";
-            this.pnl_header.Size = new System.Drawing.Size(600, 51);
+            this.pnl_header.Size = new System.Drawing.Size(945, 51);
             this.pnl_header.TabIndex = 13;
             // 
             // btn_min
@@ -80,7 +80,7 @@
             this.btn_min.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_min.Image = ((System.Drawing.Image)(resources.GetObject("btn_min.Image")));
             this.btn_min.ImageActive = null;
-            this.btn_min.Location = new System.Drawing.Point(501, 14);
+            this.btn_min.Location = new System.Drawing.Point(846, 14);
             this.btn_min.Name = "btn_min";
             this.btn_min.Size = new System.Drawing.Size(25, 25);
             this.btn_min.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -95,7 +95,7 @@
             this.btn_close.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_close.Image = ((System.Drawing.Image)(resources.GetObject("btn_close.Image")));
             this.btn_close.ImageActive = null;
-            this.btn_close.Location = new System.Drawing.Point(563, 14);
+            this.btn_close.Location = new System.Drawing.Point(908, 14);
             this.btn_close.Name = "btn_close";
             this.btn_close.Size = new System.Drawing.Size(25, 25);
             this.btn_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -121,7 +121,7 @@
             this.btn_max.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_max.Image = ((System.Drawing.Image)(resources.GetObject("btn_max.Image")));
             this.btn_max.ImageActive = null;
-            this.btn_max.Location = new System.Drawing.Point(532, 14);
+            this.btn_max.Location = new System.Drawing.Point(877, 14);
             this.btn_max.Name = "btn_max";
             this.btn_max.Size = new System.Drawing.Size(25, 25);
             this.btn_max.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -136,7 +136,7 @@
             this.btn_normal.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_normal.Image = ((System.Drawing.Image)(resources.GetObject("btn_normal.Image")));
             this.btn_normal.ImageActive = null;
-            this.btn_normal.Location = new System.Drawing.Point(532, 14);
+            this.btn_normal.Location = new System.Drawing.Point(877, 14);
             this.btn_normal.Name = "btn_normal";
             this.btn_normal.Size = new System.Drawing.Size(25, 25);
             this.btn_normal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -204,7 +204,7 @@
             this.pnl_drawer.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnl_drawer.Location = new System.Drawing.Point(0, 0);
             this.pnl_drawer.Name = "pnl_drawer";
-            this.pnl_drawer.Size = new System.Drawing.Size(200, 500);
+            this.pnl_drawer.Size = new System.Drawing.Size(200, 600);
             this.pnl_drawer.TabIndex = 14;
             // 
             // btn_exit
@@ -230,7 +230,7 @@
             this.btn_exit.ImageSize = new System.Drawing.Size(32, 32);
             this.btn_exit.LineColor = System.Drawing.Color.Empty;
             this.btn_exit.LineLeft = 3;
-            this.btn_exit.Location = new System.Drawing.Point(0, 451);
+            this.btn_exit.Location = new System.Drawing.Point(0, 551);
             this.btn_exit.Margin = new System.Windows.Forms.Padding(0);
             this.btn_exit.Name = "btn_exit";
             this.btn_exit.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
@@ -282,29 +282,6 @@
             this.btn_management.TabIndex = 13;
             this.btn_management.Text = "Management";
             // 
-            // pnl_child
-            // 
-            this.pnl_child.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
-            this.pnl_child.Controls.Add(this.resize_control);
-            this.pnl_child.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnl_child.Location = new System.Drawing.Point(0, 0);
-            this.pnl_child.Name = "pnl_child";
-            this.pnl_child.Size = new System.Drawing.Size(800, 500);
-            this.pnl_child.TabIndex = 15;
-            // 
-            // resize_control
-            // 
-            this.resize_control.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.resize_control.BackColor = System.Drawing.Color.Transparent;
-            this.resize_control.Cursor = System.Windows.Forms.Cursors.SizeNWSE;
-            this.resize_control.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(11)))), ((int)(((byte)(11)))));
-            this.resize_control.ForeColorDepth = 255;
-            this.resize_control.Location = new System.Drawing.Point(780, 480);
-            this.resize_control.Name = "resize_control";
-            this.resize_control.Size = new System.Drawing.Size(20, 20);
-            this.resize_control.TabIndex = 0;
-            this.resize_control.TargetControl = this;
-            // 
             // drag_control
             // 
             this.drag_control.Fixed = true;
@@ -325,20 +302,44 @@
             this.pic_user.TabStop = false;
             this.pic_user.UseTransfarantBackground = false;
             // 
+            // resize_control
+            // 
+            this.resize_control.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.resize_control.BackColor = System.Drawing.Color.Transparent;
+            this.resize_control.Cursor = System.Windows.Forms.Cursors.SizeNWSE;
+            this.resize_control.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(11)))), ((int)(((byte)(11)))));
+            this.resize_control.ForeColorDepth = 255;
+            this.resize_control.Location = new System.Drawing.Point(925, 529);
+            this.resize_control.Name = "resize_control";
+            this.resize_control.Size = new System.Drawing.Size(20, 20);
+            this.resize_control.TabIndex = 0;
+            this.resize_control.TargetControl = this;
+            // 
+            // pnl_child
+            // 
+            this.pnl_child.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
+            this.pnl_child.Controls.Add(this.resize_control);
+            this.pnl_child.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnl_child.Location = new System.Drawing.Point(200, 51);
+            this.pnl_child.Name = "pnl_child";
+            this.pnl_child.Size = new System.Drawing.Size(945, 549);
+            this.pnl_child.TabIndex = 15;
+            // 
             // frm_dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
-            this.ClientSize = new System.Drawing.Size(800, 500);
+            this.ClientSize = new System.Drawing.Size(1145, 600);
+            this.Controls.Add(this.pnl_child);
             this.Controls.Add(this.pnl_header);
             this.Controls.Add(this.pnl_drawer);
-            this.Controls.Add(this.pnl_child);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MinimumSize = new System.Drawing.Size(800, 500);
             this.Name = "frm_dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_dashboard";
+            this.Load += new System.EventHandler(this.frm_dashboard_Load);
             this.pnl_header.ResumeLayout(false);
             this.pnl_header.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_min)).EndInit();
@@ -349,8 +350,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.btn_toggle)).EndInit();
             this.pnl_user_data.ResumeLayout(false);
             this.pnl_drawer.ResumeLayout(false);
-            this.pnl_child.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pic_user)).EndInit();
+            this.pnl_child.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -364,7 +365,6 @@
         internal System.Windows.Forms.Label lbl_username;
         private System.Windows.Forms.Panel pnl_drawer;
         private Bunifu.Framework.UI.BunifuImageButton btn_toggle;
-        private System.Windows.Forms.Panel pnl_child;
         internal Guna.UI.WinForms.GunaAdvenceButton btn_management;
         private Bunifu.Framework.UI.BunifuImageButton btn_min;
         private Bunifu.Framework.UI.BunifuImageButton btn_close;
@@ -372,8 +372,9 @@
         private Bunifu.Framework.UI.BunifuImageButton btn_max;
         private Bunifu.Framework.UI.BunifuDragControl drag_control;
         internal Guna.UI.WinForms.GunaAdvenceButton btn_exit;
-        private Guna.UI.WinForms.GunaResizeControl resize_control;
         internal Guna.UI.WinForms.GunaCirclePictureBox pic_user;
+        private Guna.UI.WinForms.GunaResizeControl resize_control;
+        private System.Windows.Forms.Panel pnl_child;
     }
 }
 

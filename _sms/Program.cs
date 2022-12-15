@@ -9,7 +9,6 @@ namespace _sms
         public static string frm_state;
         public static string user_name;
 
-
         [STAThread]
         static void Main()
         {

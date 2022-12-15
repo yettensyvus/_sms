@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace _sms
@@ -19,6 +13,19 @@ namespace _sms
 
         int lx, ly;
         int sw, sh;
+
+        private void OpenChildForm(object form)
+        {
+            if (this.pnl_child.Controls.Count > 0)
+                this.pnl_child.Controls.Clear();
+            Form f = form as Form;
+            f.TopLevel = false;
+            f.FormBorderStyle = FormBorderStyle.None;
+            f.Dock = DockStyle.Fill;
+            this.pnl_child.Controls.Add(f);
+            this.pnl_child.Tag = f;
+            f.Show();
+        }
 
         private void btn_min_Click(object sender, EventArgs e)
         {
@@ -53,6 +60,12 @@ namespace _sms
                 frm_login fm = new frm_login();
                 fm.Show();
             }
+        }
+
+        private void frm_dashboard_Load(object sender, EventArgs e)
+        {
+            frm_management f = new frm_management();
+            OpenChildForm(f);
         }
 
         private void btn_close_Click(object sender, EventArgs e)
