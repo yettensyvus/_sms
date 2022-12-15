@@ -80,10 +80,15 @@ namespace _sms
                     Program.frm_state = "Admin";
                     Program.user_name = dtbl.Rows[0]["full_name"].ToString();
 
-                    x = (byte[])dtbl.Rows[0]["photo"];
-                    ms = new MemoryStream(x);
-                    f.pic_user.BackgroundImage = Image.FromStream(ms);
-                    f.pic_user.Image = Image.FromStream(ms);
+                    Console.Write(dtbl.Rows[0]["photo"].ToString());
+
+                    if(!Convert.IsDBNull(dtbl.Rows[0]["photo"]))
+                    {
+                        x = (byte[])dtbl.Rows[0]["photo"];
+                        ms = new MemoryStream(x);
+                        f.pic_user.BackgroundImage = Image.FromStream(ms);
+                        f.pic_user.Image = Image.FromStream(ms);
+                    }
 
                     f.lbl_username.Text = Program.user_name;
 
@@ -96,10 +101,13 @@ namespace _sms
                     Program.frm_state = "Teacher";
                     Program.user_name = dtbl.Rows[0]["full_name"].ToString();
 
-                    x = (byte[])dtbl.Rows[0]["photo"];
-                    ms = new MemoryStream(x);
-                    f.pic_user.BackgroundImage = Image.FromStream(ms);
-                    f.pic_user.Image = Image.FromStream(ms);
+                    if (!Convert.IsDBNull(dtbl.Rows[0]["photo"]))
+                    {
+                        x = (byte[])dtbl.Rows[0]["photo"];
+                        ms = new MemoryStream(x);
+                        f.pic_user.BackgroundImage = Image.FromStream(ms);
+                        f.pic_user.Image = Image.FromStream(ms);
+                    }
 
                     f.lbl_username.Text = Program.user_name;
 
@@ -112,10 +120,13 @@ namespace _sms
                     Program.frm_state = "Student";
                     Program.user_name = dtbl.Rows[0]["full_name"].ToString();
 
-                    x = (byte[])dtbl.Rows[0]["photo"];
-                    ms = new MemoryStream(x);
-                    f.pic_user.BackgroundImage = Image.FromStream(ms);
-                    f.pic_user.Image = Image.FromStream(ms);
+                    if (!Convert.IsDBNull(dtbl.Rows[0]["photo"]))
+                    {
+                        x = (byte[])dtbl.Rows[0]["photo"];
+                        ms = new MemoryStream(x);
+                        f.pic_user.BackgroundImage = Image.FromStream(ms);
+                        f.pic_user.Image = Image.FromStream(ms);
+                    }
 
                     f.lbl_username.Text = Program.user_name;
 
@@ -123,7 +134,6 @@ namespace _sms
                     f.Show();
                 }
             }
-
             catch (Exception ex)
             {
                 messagebox.frm_messagebox.Show(ex.Message, "Ooops! Somethig is wrong!", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);

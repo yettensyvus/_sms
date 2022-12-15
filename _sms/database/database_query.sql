@@ -31,7 +31,7 @@ CREATE TABLE admins
 		full_name	NAMES NOT NULL,
 		email		NAMES NOT NULL,
         password	NAMES NOT NULL,
-		photo		IMAGE,
+		photo		IMAGE DEFAULT NULL,
 		role		NAMES DEFAULT 'admin',
         secret_word NAMES NOT NULL
 	);
@@ -46,7 +46,7 @@ CREATE TABLE teachers
 		idnp			NAMES NOT NULL,
 		date_of_birth	DATE NOT NULL,
 		email			NAMES NOT NULL,
-		photo			IMAGE,
+		photo			IMAGE DEFAULT NULL,
 		role			NAMES DEFAULT 'teacher',
         secret_word		NAMES NOT NULL,
 
@@ -64,7 +64,7 @@ CREATE TABLE students
 		idnp			NAMES NOT NULL,
 		date_of_birth	DATE NOT NULL,
 		email			NAMES NOT NULL,
-		photo			IMAGE,
+		photo			IMAGE DEFAULT NULL,
 		role			NAMES DEFAULT 'student',
         secret_word		NAMES NOT NULL,
 
@@ -82,7 +82,7 @@ VALUES ('teacher', 'teacher', 'teacher@gmail.com', 'kELewU2L+UG+d/LA8Ahimw==', '
 INSERT INTO students(username, full_name, email, password, role, secret_word, idnp, date_of_birth)
 VALUES ('student', 'student', 'student@gmail.com', 'PbgxHRTNv+DrVusXLfzE/w==', 'student', 'student', '1793456287139', '2005-12-28') --encrypted password: student
 
-SELECT * FROM admins
+SELECT * FROM  admins
 SELECT * FROM  teachers
 SELECT * FROM  students
 
@@ -98,3 +98,8 @@ CREATE VIEW users_view AS
 GO
 
 SELECT * FROM sys.databases WHERE name NOT IN ('master', 'tempdb', 'model', 'msdb'); 
+
+
+SELECT role, COUNT( id_user) AS count FROM users_view
+WHERE (role = 'admin') OR (role = 'teacher') OR (role = 'student') 
+GROUP BY role

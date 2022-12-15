@@ -40,11 +40,11 @@
             this.btn_toggle = new Bunifu.Framework.UI.BunifuImageButton();
             this.pnl_user_data = new System.Windows.Forms.Panel();
             this.lbl_username = new System.Windows.Forms.Label();
+            this.pic_user = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.pnl_drawer = new System.Windows.Forms.Panel();
             this.btn_exit = new Guna.UI.WinForms.GunaAdvenceButton();
             this.btn_management = new Guna.UI.WinForms.GunaAdvenceButton();
             this.drag_control = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.pic_user = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.resize_control = new Guna.UI.WinForms.GunaResizeControl();
             this.pnl_child = new System.Windows.Forms.Panel();
             this.pnl_header.SuspendLayout();
@@ -55,8 +55,8 @@
             this.pnl_toggle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_toggle)).BeginInit();
             this.pnl_user_data.SuspendLayout();
-            this.pnl_drawer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_user)).BeginInit();
+            this.pnl_drawer.SuspendLayout();
             this.pnl_child.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -194,6 +194,19 @@
             this.lbl_username.Text = "USERNAME";
             this.lbl_username.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // pic_user
+            // 
+            this.pic_user.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pic_user.BaseColor = System.Drawing.Color.Transparent;
+            this.pic_user.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pic_user.Location = new System.Drawing.Point(0, 0);
+            this.pic_user.Name = "pic_user";
+            this.pic_user.Size = new System.Drawing.Size(200, 200);
+            this.pic_user.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_user.TabIndex = 2;
+            this.pic_user.TabStop = false;
+            this.pic_user.UseTransfarantBackground = false;
+            // 
             // pnl_drawer
             // 
             this.pnl_drawer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(36)))));
@@ -289,19 +302,6 @@
             this.drag_control.TargetControl = this.pnl_header;
             this.drag_control.Vertical = true;
             // 
-            // pic_user
-            // 
-            this.pic_user.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pic_user.BaseColor = System.Drawing.Color.Transparent;
-            this.pic_user.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pic_user.Location = new System.Drawing.Point(0, 0);
-            this.pic_user.Name = "pic_user";
-            this.pic_user.Size = new System.Drawing.Size(200, 200);
-            this.pic_user.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic_user.TabIndex = 2;
-            this.pic_user.TabStop = false;
-            this.pic_user.UseTransfarantBackground = false;
-            // 
             // resize_control
             // 
             this.resize_control.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -334,6 +334,7 @@
             this.Controls.Add(this.pnl_child);
             this.Controls.Add(this.pnl_header);
             this.Controls.Add(this.pnl_drawer);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MinimumSize = new System.Drawing.Size(800, 500);
             this.Name = "frm_dashboard";
@@ -349,8 +350,8 @@
             this.pnl_toggle.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btn_toggle)).EndInit();
             this.pnl_user_data.ResumeLayout(false);
-            this.pnl_drawer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pic_user)).EndInit();
+            this.pnl_drawer.ResumeLayout(false);
             this.pnl_child.ResumeLayout(false);
             this.ResumeLayout(false);
 
