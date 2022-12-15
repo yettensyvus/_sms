@@ -75,12 +75,12 @@ namespace _sms.methodes
             }
         }
 
-        public bool ExecuteParameter(string query, string name, SqlDbType type, string value)
+        public bool ExecuteParameter(string query, string param, SqlDbType type, string value)
         {
             try
             {
                 SqlCommand command = new SqlCommand(query, OpenConection());
-                SqlParameter parameter = new SqlParameter(name, type);
+                SqlParameter parameter = new SqlParameter(param, type);
                 parameter.Value = value;
                 command.Parameters.Add(parameter);
                 command.ExecuteNonQuery();

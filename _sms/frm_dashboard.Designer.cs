@@ -39,7 +39,6 @@
             this.pnl_toggle = new System.Windows.Forms.Panel();
             this.btn_toggle = new Bunifu.Framework.UI.BunifuImageButton();
             this.pnl_user_data = new System.Windows.Forms.Panel();
-            this.pic_user = new System.Windows.Forms.PictureBox();
             this.lbl_username = new System.Windows.Forms.Label();
             this.pnl_drawer = new System.Windows.Forms.Panel();
             this.btn_exit = new Guna.UI.WinForms.GunaAdvenceButton();
@@ -47,6 +46,7 @@
             this.pnl_child = new System.Windows.Forms.Panel();
             this.resize_control = new Guna.UI.WinForms.GunaResizeControl();
             this.drag_control = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.pic_user = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.pnl_header.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_min)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_close)).BeginInit();
@@ -55,9 +55,9 @@
             this.pnl_toggle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_toggle)).BeginInit();
             this.pnl_user_data.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_user)).BeginInit();
             this.pnl_drawer.SuspendLayout();
             this.pnl_child.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_user)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl_header
@@ -170,24 +170,13 @@
             // 
             // pnl_user_data
             // 
-            this.pnl_user_data.Controls.Add(this.pic_user);
             this.pnl_user_data.Controls.Add(this.lbl_username);
+            this.pnl_user_data.Controls.Add(this.pic_user);
             this.pnl_user_data.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_user_data.Location = new System.Drawing.Point(0, 52);
             this.pnl_user_data.Name = "pnl_user_data";
-            this.pnl_user_data.Size = new System.Drawing.Size(200, 180);
+            this.pnl_user_data.Size = new System.Drawing.Size(200, 240);
             this.pnl_user_data.TabIndex = 11;
-            // 
-            // pic_user
-            // 
-            this.pic_user.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pic_user.Location = new System.Drawing.Point(0, 0);
-            this.pic_user.Name = "pic_user";
-            this.pic_user.Size = new System.Drawing.Size(200, 140);
-            this.pic_user.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic_user.TabIndex = 109;
-            this.pic_user.TabStop = false;
-            this.pic_user.WaitOnLoad = true;
             // 
             // lbl_username
             // 
@@ -196,9 +185,10 @@
             this.lbl_username.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbl_username.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.lbl_username.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lbl_username.Location = new System.Drawing.Point(0, 140);
+            this.lbl_username.Location = new System.Drawing.Point(0, 200);
             this.lbl_username.MinimumSize = new System.Drawing.Size(215, 30);
             this.lbl_username.Name = "lbl_username";
+            this.lbl_username.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.lbl_username.Size = new System.Drawing.Size(215, 40);
             this.lbl_username.TabIndex = 1;
             this.lbl_username.Text = "USERNAME";
@@ -278,7 +268,7 @@
             this.btn_management.ImageSize = new System.Drawing.Size(32, 32);
             this.btn_management.LineColor = System.Drawing.Color.Black;
             this.btn_management.LineLeft = 3;
-            this.btn_management.Location = new System.Drawing.Point(0, 232);
+            this.btn_management.Location = new System.Drawing.Point(0, 292);
             this.btn_management.Margin = new System.Windows.Forms.Padding(0);
             this.btn_management.Name = "btn_management";
             this.btn_management.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
@@ -322,6 +312,19 @@
             this.drag_control.TargetControl = this.pnl_header;
             this.drag_control.Vertical = true;
             // 
+            // pic_user
+            // 
+            this.pic_user.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pic_user.BaseColor = System.Drawing.Color.Transparent;
+            this.pic_user.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pic_user.Location = new System.Drawing.Point(0, 0);
+            this.pic_user.Name = "pic_user";
+            this.pic_user.Size = new System.Drawing.Size(200, 200);
+            this.pic_user.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_user.TabIndex = 2;
+            this.pic_user.TabStop = false;
+            this.pic_user.UseTransfarantBackground = false;
+            // 
             // frm_dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -345,9 +348,9 @@
             this.pnl_toggle.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btn_toggle)).EndInit();
             this.pnl_user_data.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pic_user)).EndInit();
             this.pnl_drawer.ResumeLayout(false);
             this.pnl_child.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pic_user)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -358,7 +361,6 @@
         private System.Windows.Forms.Label lbl_title;
         private System.Windows.Forms.Panel pnl_toggle;
         private System.Windows.Forms.Panel pnl_user_data;
-        internal System.Windows.Forms.PictureBox pic_user;
         internal System.Windows.Forms.Label lbl_username;
         private System.Windows.Forms.Panel pnl_drawer;
         private Bunifu.Framework.UI.BunifuImageButton btn_toggle;
@@ -371,6 +373,7 @@
         private Bunifu.Framework.UI.BunifuDragControl drag_control;
         internal Guna.UI.WinForms.GunaAdvenceButton btn_exit;
         private Guna.UI.WinForms.GunaResizeControl resize_control;
+        internal Guna.UI.WinForms.GunaCirclePictureBox pic_user;
     }
 }
 

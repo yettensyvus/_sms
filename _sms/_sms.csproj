@@ -33,6 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bunifu.Core, Version=1.11.5.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9" />
     <Reference Include="Bunifu.UI.WinForms.BunifuTextbox">
       <HintPath>D:\dot_net_frameworks_UI-main\Bunifu_UI\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
     </Reference>

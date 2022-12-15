@@ -69,7 +69,8 @@ namespace _sms
             {
                 pnl_drawer.Width = 50;
                 pnl_toggle.BackColor = Color.FromArgb(11, 11, 11);
-                pnl_user_data.Height = 80;
+                pnl_user_data.Height = 50;
+                pic_user.Hide();
                 lbl_username.Visible = false;
 
             }
@@ -77,7 +78,8 @@ namespace _sms
             {
                 pnl_drawer.Width = 200;
                 pnl_toggle.BackColor = Color.FromArgb(32, 32, 36);
-                pnl_user_data.Height = 180;
+                pnl_user_data.Height = 240;
+                pic_user.Show();
                 lbl_username.Visible = true;
             }
         }

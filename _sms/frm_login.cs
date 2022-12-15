@@ -68,6 +68,9 @@ namespace _sms
                 string query = "SELECT * FROM users_view WHERE username = '" + txt_username.Text.Trim() + "' AND password = '" + AesCrypt.Encrypt(txt_password.Text.Trim()) + "'";
 
                 DataTable dtbl = new DataTable();
+                MemoryStream ms = new MemoryStream();
+                byte[] x = null;
+
                 dtbl = controller.ExecuteReader(query);
 
                 if (dtbl == null)
@@ -81,6 +84,12 @@ namespace _sms
                 {
                     Program.frm_state = "Admin";
                     Program.user_name = dtbl.Rows[0]["full_name"].ToString();
+
+                    x = (byte[])dtbl.Rows[0]["photo"];
+                    ms = new MemoryStream(x);
+                    f.pic_user.BackgroundImage = Image.FromStream(ms);
+                    f.pic_user.Image = Image.FromStream(ms);
+
                     f.lbl_username.Text = Program.user_name;
 
                     this.Hide();
@@ -91,6 +100,12 @@ namespace _sms
                 {
                     Program.frm_state = "Teacher";
                     Program.user_name = dtbl.Rows[0]["full_name"].ToString();
+
+                    x = (byte[])dtbl.Rows[0]["photo"];
+                    ms = new MemoryStream(x);
+                    f.pic_user.BackgroundImage = Image.FromStream(ms);
+                    f.pic_user.Image = Image.FromStream(ms);
+
                     f.lbl_username.Text = Program.user_name;
 
                     this.Hide();
@@ -101,6 +116,12 @@ namespace _sms
                 {
                     Program.frm_state = "Student";
                     Program.user_name = dtbl.Rows[0]["full_name"].ToString();
+
+                    x = (byte[])dtbl.Rows[0]["photo"];
+                    ms = new MemoryStream(x);
+                    f.pic_user.BackgroundImage = Image.FromStream(ms);
+                    f.pic_user.Image = Image.FromStream(ms);
+
                     f.lbl_username.Text = Program.user_name;
 
                     this.Hide();
