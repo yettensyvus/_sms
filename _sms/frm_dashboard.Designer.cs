@@ -375,7 +375,7 @@
         internal Guna.UI.WinForms.GunaAdvenceButton btn_exit;
         internal Guna.UI.WinForms.GunaCirclePictureBox pic_user;
         private Guna.UI.WinForms.GunaResizeControl resize_control;
-        private System.Windows.Forms.Panel pnl_child;
+        internal System.Windows.Forms.Panel pnl_child;
     }
 }
 

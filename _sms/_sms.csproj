@@ -34,6 +34,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu.Core, Version=1.11.5.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9" />
+    <Reference Include="Bunifu.UI.WinForms.BunifuDataGridView">
+      <HintPath>D:\dot_net_frameworks_UI-main\Bunifu_UI\Bunifu.UI.WinForms.BunifuDataGridView.dll</HintPath>
+    </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuTextbox">
       <HintPath>D:\dot_net_frameworks_UI-main\Bunifu_UI\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
     </Reference>
@@ -61,6 +64,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frm_admin_list.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_admin_list.Designer.cs">
+      <DependentUpon>frm_admin_list.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +98,9 @@
     <Compile Include="methodes\DBController.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frm_admin_list.resx">
+      <DependentUpon>frm_admin_list.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_dashboard.resx">
       <DependentUpon>frm_dashboard.cs</DependentUpon>
     </EmbeddedResource>

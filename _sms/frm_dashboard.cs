@@ -14,16 +14,16 @@ namespace _sms
         int lx, ly;
         int sw, sh;
 
-        private void OpenChildForm(object form)
-        {
-            if (this.pnl_child.Controls.Count > 0)
-                this.pnl_child.Controls.Clear();
+        public void OpenChildForm(object form, Panel p)
+        { 
+            if (p.Controls.Count > 0)
+                p.Controls.Clear();
             Form f = form as Form;
             f.TopLevel = false;
             f.FormBorderStyle = FormBorderStyle.None;
             f.Dock = DockStyle.Fill;
-            this.pnl_child.Controls.Add(f);
-            this.pnl_child.Tag = f;
+            p.Controls.Add(f);
+            p.Tag = f;
             f.Show();
         }
 
@@ -65,7 +65,7 @@ namespace _sms
         private void frm_dashboard_Load(object sender, EventArgs e)
         {
             frm_management f = new frm_management();
-            OpenChildForm(f);
+            OpenChildForm(f, pnl_child);
         }
 
         private void btn_close_Click(object sender, EventArgs e)

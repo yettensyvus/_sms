@@ -55,5 +55,13 @@ namespace _sms
                 messagebox.frm_messagebox.Show(ex.Message, "Alert! Somethig is wrong!", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
             }
         }
+
+        private void btn_admins_list_Click(object sender, EventArgs e)
+        {
+            frm_admin_list f = new frm_admin_list();
+            frm_dashboard frm_ = new frm_dashboard();
+            frm_.OpenChildForm(f, pnl_child);
+        }
+
     }
 }

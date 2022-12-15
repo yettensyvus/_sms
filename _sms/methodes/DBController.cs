@@ -2,9 +2,6 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace _sms.methodes
@@ -12,7 +9,6 @@ namespace _sms.methodes
     internal class DBController
     {
         SqlConnection connection;
-
         public SqlConnection OpenConection()
         {
             connection = new SqlConnection(@"Data Source =.\SQLEXPRESS; Initial Catalog = " + Program.database_name + "; Integrated Security = True");

@@ -26,3 +26,6 @@ C:\Users\Aleksandr Straton\source\repos\project\_sms\_sms\bin\Debug\notification
 C:\Users\Aleksandr Straton\source\repos\project\_sms\_sms\obj\Debug\_sms.frm_database.resources
 C:\Users\Aleksandr Straton\source\repos\project\_sms\_sms\bin\Debug\Guna.UI2.dll
 C:\Users\Aleksandr Straton\source\repos\project\_sms\_sms\obj\Debug\_sms.frm_management.resources
+C:\Users\Aleksandr Straton\source\repos\project\_sms\_sms\bin\Debug\Bunifu.UI.WinForms.BunifuDataGridView.dll
+C:\Users\Aleksandr Straton\source\repos\project\_sms\_sms\bin\Debug\Bunifu.UI.WinForms.BunifuDataGridView.xml
+C:\Users\Aleksandr Straton\source\repos\project\_sms\_sms\obj\Debug\_sms.frm_admin_list.resources

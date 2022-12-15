@@ -49,10 +49,12 @@
             this.pic_admin = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lbl_total_admins = new System.Windows.Forms.Label();
             this.lbl_admin = new System.Windows.Forms.Label();
+            this.pnl_separator = new System.Windows.Forms.Panel();
             this.pnl_header = new System.Windows.Forms.Panel();
             this.pnl_left = new System.Windows.Forms.Panel();
             this.pnl_right = new System.Windows.Forms.Panel();
-            this.pnl_separator = new System.Windows.Forms.Panel();
+            this.resize_control = new Guna.UI.WinForms.GunaResizeControl();
+            this.pnl_child = new System.Windows.Forms.Panel();
             this.pnl_elipse_1.SuspendLayout();
             this.table_layout_1.SuspendLayout();
             this.pnl_students.SuspendLayout();
@@ -61,6 +63,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic_teachers)).BeginInit();
             this.pnl_admins.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_admin)).BeginInit();
+            this.pnl_child.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnl_elipse_1
@@ -73,7 +76,7 @@
             this.pnl_elipse_1.Name = "pnl_elipse_1";
             this.pnl_elipse_1.Radius = 30;
             this.pnl_elipse_1.Size = new System.Drawing.Size(969, 166);
-            this.pnl_elipse_1.TabIndex = 4;
+            this.pnl_elipse_1.TabIndex = 12;
             // 
             // table_layout_1
             // 
@@ -331,6 +334,7 @@
             this.btn_admins_list.Size = new System.Drawing.Size(55, 44);
             this.btn_admins_list.TabIndex = 15;
             this.btn_admins_list.UseTransparentBackground = true;
+            this.btn_admins_list.Click += new System.EventHandler(this.btn_admins_list_Click);
             // 
             // pic_admin
             // 
@@ -368,37 +372,65 @@
             this.lbl_admin.TabIndex = 16;
             this.lbl_admin.Text = "Admins";
             // 
+            // pnl_separator
+            // 
+            this.pnl_separator.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnl_separator.Location = new System.Drawing.Point(20, 0);
+            this.pnl_separator.Name = "pnl_separator";
+            this.pnl_separator.Size = new System.Drawing.Size(969, 40);
+            this.pnl_separator.TabIndex = 15;
+            // 
             // pnl_header
             // 
             this.pnl_header.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnl_header.Location = new System.Drawing.Point(0, 0);
+            this.pnl_header.Location = new System.Drawing.Point(20, 206);
             this.pnl_header.Name = "pnl_header";
-            this.pnl_header.Size = new System.Drawing.Size(1009, 40);
-            this.pnl_header.TabIndex = 3;
+            this.pnl_header.Size = new System.Drawing.Size(969, 40);
+            this.pnl_header.TabIndex = 11;
             // 
             // pnl_left
             // 
             this.pnl_left.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnl_left.Location = new System.Drawing.Point(0, 40);
+            this.pnl_left.Location = new System.Drawing.Point(0, 0);
             this.pnl_left.Name = "pnl_left";
-            this.pnl_left.Size = new System.Drawing.Size(20, 509);
-            this.pnl_left.TabIndex = 5;
+            this.pnl_left.Size = new System.Drawing.Size(20, 549);
+            this.pnl_left.TabIndex = 13;
             // 
             // pnl_right
             // 
             this.pnl_right.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnl_right.Location = new System.Drawing.Point(989, 40);
+            this.pnl_right.Location = new System.Drawing.Point(989, 0);
             this.pnl_right.Name = "pnl_right";
-            this.pnl_right.Size = new System.Drawing.Size(20, 509);
-            this.pnl_right.TabIndex = 7;
+            this.pnl_right.Size = new System.Drawing.Size(20, 549);
+            this.pnl_right.TabIndex = 14;
             // 
-            // pnl_separator
+            // resize_control
             // 
-            this.pnl_separator.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnl_separator.Location = new System.Drawing.Point(20, 206);
-            this.pnl_separator.Name = "pnl_separator";
-            this.pnl_separator.Size = new System.Drawing.Size(969, 40);
-            this.pnl_separator.TabIndex = 9;
+            this.resize_control.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.resize_control.BackColor = System.Drawing.Color.Transparent;
+            this.resize_control.Cursor = System.Windows.Forms.Cursors.SizeNWSE;
+            this.resize_control.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(11)))), ((int)(((byte)(11)))));
+            this.resize_control.ForeColorDepth = 255;
+            this.resize_control.Location = new System.Drawing.Point(989, 529);
+            this.resize_control.Name = "resize_control";
+            this.resize_control.Size = new System.Drawing.Size(20, 20);
+            this.resize_control.TabIndex = 10;
+            this.resize_control.TargetControl = null;
+            // 
+            // pnl_child
+            // 
+            this.pnl_child.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
+            this.pnl_child.Controls.Add(this.resize_control);
+            this.pnl_child.Controls.Add(this.pnl_header);
+            this.pnl_child.Controls.Add(this.pnl_elipse_1);
+            this.pnl_child.Controls.Add(this.pnl_separator);
+            this.pnl_child.Controls.Add(this.pnl_left);
+            this.pnl_child.Controls.Add(this.pnl_right);
+            this.pnl_child.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnl_child.Location = new System.Drawing.Point(0, 0);
+            this.pnl_child.Name = "pnl_child";
+            this.pnl_child.Size = new System.Drawing.Size(1009, 549);
+            this.pnl_child.TabIndex = 16;
             // 
             // frm_management
             // 
@@ -406,11 +438,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
             this.ClientSize = new System.Drawing.Size(1009, 549);
-            this.Controls.Add(this.pnl_separator);
-            this.Controls.Add(this.pnl_elipse_1);
-            this.Controls.Add(this.pnl_right);
-            this.Controls.Add(this.pnl_left);
-            this.Controls.Add(this.pnl_header);
+            this.Controls.Add(this.pnl_child);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_management";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -427,6 +455,7 @@
             this.pnl_admins.ResumeLayout(false);
             this.pnl_admins.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_admin)).EndInit();
+            this.pnl_child.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -434,9 +463,6 @@
         #endregion
 
         private Guna.UI.WinForms.GunaElipsePanel pnl_elipse_1;
-        private System.Windows.Forms.Panel pnl_header;
-        private System.Windows.Forms.Panel pnl_left;
-        private System.Windows.Forms.Panel pnl_right;
         private System.Windows.Forms.TableLayoutPanel table_layout_1;
         private Guna.UI2.WinForms.Guna2ShadowPanel pnl_students;
         private System.Windows.Forms.Label lbl_students_count;
@@ -457,5 +483,10 @@
         private System.Windows.Forms.Label lbl_total_admins;
         private System.Windows.Forms.Label lbl_admin;
         private System.Windows.Forms.Panel pnl_separator;
+        private System.Windows.Forms.Panel pnl_header;
+        private System.Windows.Forms.Panel pnl_left;
+        private System.Windows.Forms.Panel pnl_right;
+        private Guna.UI.WinForms.GunaResizeControl resize_control;
+        private System.Windows.Forms.Panel pnl_child;
     }
 }
